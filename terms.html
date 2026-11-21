@@ -1,0 +1,43 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Terms of service | Trendy Finds</title><meta name="description" content="Trendy Finds - trending finds with free tracked shipping.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://trendyfindsshop.github.io/style.css"><meta name="theme-color" content="#ff5a1f">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛍️</text></svg>">
+
+<meta name="google-site-verification" content="aCgC9KsWeVmE3ddkYwET0_ejanbDB0VMjih5DkQ0kso"><meta name="p:domain_verify" content="52a135a3a02307961a0ed04eab945b96"><script data-goatcounter="https://brus.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></head><body class="">
+<div class="bar" id="bar">🚚 <b>FREE tracked shipping</b> on every order &nbsp;·&nbsp; ↩️ 30-day money-back guarantee</div>
+<header><div class="w"><a class="logo" href="https://trendyfindsshop.github.io/">Trendy<span>Finds</span></a>
+<nav><a href="https://trendyfindsshop.github.io/#shop">Shop</a><a class="hide" href="https://trendyfindsshop.github.io/#faq">FAQ</a><a href="https://trendyfindsshop.github.io/contact.html">Contact</a></nav></div></header>
+<main class="w page"><h1>Terms of service</h1><p>By ordering from Trendy Finds you agree to these terms. Prices are in US dollars and include free shipping. We may cancel and fully refund any order we cannot fulfill. Product photos are for illustration; small differences may occur. See our shipping and refund policies for delivery and returns.</p></main>
+<footer><div class="w"><div class="cols"><div><a class="logo" href="https://trendyfindsshop.github.io/" style="font-size:22px">Trendy<span>Finds</span></a><p>Hand-picked viral finds, shipped free with tracking. Secure checkout by PayPal.</p><p>Questions? <a href="mailto:arissakedaj@gmail.com" style="display:inline">arissakedaj@gmail.com</a></p></div>
+<div><h4>Shop</h4><a href="https://trendyfindsshop.github.io/#shop">All products</a><a href="https://trendyfindsshop.github.io/#trending">Trending videos</a><a href="https://trendyfindsshop.github.io/#faq">FAQ</a></div>
+<div><h4>Help</h4><a href="https://trendyfindsshop.github.io/shipping.html">Shipping</a><a href="https://trendyfindsshop.github.io/returns.html">Returns &amp; refunds</a><a href="https://trendyfindsshop.github.io/privacy.html">Privacy</a><a href="https://trendyfindsshop.github.io/terms.html">Terms</a><a href="https://trendyfindsshop.github.io/contact.html">Contact</a></div></div>
+<div class="fine">© 2026 Trendy Finds · Prices in USD · Secure checkout by PayPal</div></div></footer>
+<script>
+document.querySelectorAll('.fade').forEach(e=>new IntersectionObserver((x,o)=>x.forEach(i=>{if(i.isIntersecting){e.classList.add('on');o.disconnect()}}),{threshold:.1}).observe(e));
+// videos only load + play while on screen (saves data on phones)
+const vo=new IntersectionObserver(x=>x.forEach(i=>{const v=i.target;if(i.isIntersecting){if(!v.src&&v.dataset.src)v.src=v.dataset.src;v.play().catch(()=>{})}else v.pause()}),{threshold:.35});
+document.querySelectorAll('video[data-auto]').forEach(v=>vo.observe(v));
+// real delivery estimates (business days, plus 1-3 days to process the order) and Christmas delivery hints based on them
+const addBiz=(n,f=new Date())=>{const d=new Date(f);while(n>0){d.setDate(d.getDate()+1);const w=d.getDay();if(w&&w<6)n--}return d};
+const fmt=d=>d.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
+const xmasDay=()=>new Date(new Date().getFullYear(),11,23),inSeason=()=>new Date().getMonth()>=10;
+const xmasOK=b=>inSeason()&&addBiz(b+3)<=xmasDay();
+document.querySelectorAll('#eta[data-a]').forEach(e=>e.textContent=fmt(addBiz(+e.dataset.a+1))+' – '+fmt(addBiz(+e.dataset.b+3)));
+document.querySelectorAll('.x[data-maxd]').forEach(e=>{if(xmasOK(+e.dataset.maxd))e.hidden=false});
+if(xmasOK(15)){let d=new Date();while(addBiz(18,new Date(d.getTime()+864e5))<=xmasDay())d.setDate(d.getDate()+1);
+document.getElementById('bar').innerHTML='🎄 <b>Christmas gifts:</b> order by '+fmt(d)+' for estimated delivery before Christmas &nbsp;·&nbsp; 🚚 FREE tracked shipping'}
+// header shadow on scroll
+const hd=document.querySelector('header');addEventListener('scroll',()=>hd.classList.toggle('sc',scrollY>10),{passive:true});
+const calm=matchMedia('(prefers-reduced-motion: reduce)').matches,fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
+// gentle 3D tilt on product cards (mouse only)
+if(fine&&!calm)document.querySelectorAll('.card').forEach(c=>{c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+c.style.transition='transform .08s';c.style.transform='perspective(800px) rotateY('+x*7+'deg) rotateX('+(-y*7)+'deg) translateY(-4px)'});c.addEventListener('mouseleave',()=>{c.style.transition='';c.style.transform=''})});
+// hover-zoom on the big product photo (mouse only)
+const st=document.getElementById('stage');if(st&&fine){st.addEventListener('mousemove',e=>{const i=st.querySelector('img');if(!i)return;const r=st.getBoundingClientRect();i.style.transformOrigin=((e.clientX-r.left)/r.width*100)+'% '+((e.clientY-r.top)/r.height*100)+'%';st.classList.add('zoom')});st.addEventListener('mouseleave',()=>st.classList.remove('zoom'))}
+// confetti when an order goes through
+window.confetti=()=>{if(calm)return;const cv=document.createElement('canvas');cv.id='confetti';document.body.appendChild(cv);const x=cv.getContext('2d');cv.width=innerWidth;cv.height=innerHeight;
+const cs=['#ff5a1f','#ff2e63','#ffd23f','#12a150','#3a86ff'],P=Array.from({length:160},()=>({x:innerWidth/2,y:innerHeight/3,vx:(Math.random()-.5)*16,vy:Math.random()*-14-4,s:Math.random()*8+4,c:cs[Math.random()*5|0],r:Math.random()*6}));
+let t=0;(function f(){x.clearRect(0,0,cv.width,cv.height);P.forEach(p=>{p.vy+=.35;p.x+=p.vx;p.y+=p.vy;p.r+=.1;x.save();x.translate(p.x,p.y);x.rotate(p.r);x.fillStyle=p.c;x.fillRect(-p.s/2,-p.s/4,p.s,p.s/2);x.restore()});if(++t<180)requestAnimationFrame(f);else cv.remove()})()};
+</script><script async defer src="https://assets.pinterest.com/js/pinit.js" data-pin-hover="true" data-pin-tall="true"></script></body></html>
